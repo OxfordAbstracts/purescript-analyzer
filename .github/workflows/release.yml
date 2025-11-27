@@ -102,8 +102,6 @@ jobs:
           target: ${{matrix.target}}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-          dry-run: true
-
           # Sign build products using codesign on macOS
           codesign: "47BE53B998AB29ED40729A647D0E481FE058CE9F"
           codesign-prefix: "com.purefunctor."
