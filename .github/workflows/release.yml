@@ -26,17 +26,17 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: ubuntu-latest
-            target: x86_64-unknown-linux-gnu
-
-          - os: ubuntu-latest
-            target: x86_64-unknown-linux-musl
-
+          # - os: ubuntu-latest
+          #   target: x86_64-unknown-linux-gnu
+          #
+          # - os: ubuntu-latest
+          #   target: x86_64-unknown-linux-musl
+          #
           - os: macos-latest
             target: universal-apple-darwin
-
-          - os: windows-latest
-            target: x86_64-pc-windows-msvc
+          #
+          # - os: windows-latest
+          #   target: x86_64-pc-windows-msvc
 
     steps:
       - name: Checkout repository
@@ -101,6 +101,8 @@ jobs:
           locked: true
           target: ${{matrix.target}}
           token: ${{ secrets.GITHUB_TOKEN }}
+
+          dry-run: true
 
           # Sign build products using codesign on macOS
           codesign: "W53H5ARXR8"
