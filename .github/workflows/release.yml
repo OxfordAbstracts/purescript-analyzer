@@ -98,7 +98,7 @@ jobs:
           include: README.md,LICENSE,ACKNOWLEDGEMENTS.md,THIRDPARTY.toml
           leading-dir: true
           locked: true
-          target: universal-apple-darwin
+          target: ${{matrix.target}}
           token: ${{ secrets.GITHUB_TOKEN }}
 
           # Sign build products using codesign on macOS
