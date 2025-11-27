@@ -105,8 +105,8 @@ jobs:
           dry-run: true
 
           # Sign build products using codesign on macOS
-          codesign: "W53H5ARXR8"
-          codesign-prefix: "com.purefunctor"
+          codesign: "47BE53B998AB29ED40729A647D0E481FE058CE9F"
+          codesign-prefix: "com.purefunctor."
           codesign-options: "runtime"
 
       - name: Zip the binary for notarization (macOS)
